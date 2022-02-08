@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    overflow-x: hidden;
+}
+section{
+    padding: 1rem 5%;
+}
+.heading{
+    text-align: center;
+    padding: 1rem;
+    color: #ee9d5a;
+    font-size: 3rem;
+    padding-top: 8rem;
+}
+header{
+    width: 100%;
+    background: #ee9d5a;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.mylogo{
+     width: 100px;
+    border-radius: 50px; 
+}
+#search-box{
+    position: absolute;
+    top:100%; left:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:rgb(252, 247, 109);
+    padding: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+}
+#search-box.active{
+    transform: scaleY(1);
+    opacity: 1;
+}
+#search-box #search{
+    width: 100%;
+    text-transform: none;
+    font-size: 1.3rem;
+}
+#search-box #search::placeholder{
+    text-transform: capitalize;
+}
+#search-box label{
+    font-size: 2rem;
+    color: #ee9d5a;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+header .navbar a{
+color: rgb(255, 255, 255);
+font-size: 1.2rem;
+margin: 0.1rem;
+padding: 0.1rem;
+}
+header .navbar a:hover{
+    color: rgb(252, 247, 109);
+}
+header i{
+    font-size: 1.5rem;
+    color: white;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+header i:hover{
+    color: rgb(252, 247, 109);
+}
+#menu{
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.home{
+    min-height: 110vh;
+    background-image: url(../img/pets.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.text{
+    font-size: 1.5rem;
+    color:#ee9d5a;
+    font-weight: bolder;
+    margin-top: 5rem;
+    
+}
+
+.adoptme .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+.adoptme .box-container .box{
+    width: 25rem;
+    margin: 2rem;
+    text-align: center;
+}
+.adoptme .box-container .box img{
+    width: 100%;
+}
+.adoptme .box-container .box h3{
+    color: #ee9d5a;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .7rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    background: #ee9d5a;
+    color: white;
+    position: relative;
+   
+}
+.btn::before{
+content: '';
+position: absolute;
+top: 0; left: 0;
+height: 100%;
+width: 100%;
+clip-path: polygon(0 0, 100% 0, 10% 25%, 0 100%);
+background: rgb(252, 247, 109);
+}
+.contact{
+    background-color: rgb(252, 249, 200);
+}
+.contact .heading i{
+    color: #ee9d5a;
+}
+.contact form{
+    padding: 2rem 10%;
+    text-align: center;
+}
+.contact form .inputBox{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.contact form .inputBox input, .contact form textarea{
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    width: 49%;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+    text-transform: none;
+}
+.contact form .inputBox input::placeholder, .contact form textarea::placeholder{
+    text-transform: capitalize;
+}
+.contact form textarea{
+    height: 10rem;
+    resize: none;
+    width: 100%;
+}
+.contact form .btn{
+    cursor: pointer;
+}
+.footer .share{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+padding: 1rem 0;
+}
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    margin: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+}
+.pic{
+    width: 40rem;
+    height: 30rem;
+    float: right;
+}
+.title{
+    color: #ee9d5a;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem;
+    font-weight: bolder;
+}
+.pets{
+    width: 35rem;
+    height: 25rem;
+    padding: 1.5rem;
+    float: right;
+}
+.foksipic{
+    width: 35rem;
+    height: 25rem;
+    padding: 1rem;
+}
+    .sort1, li{
+    list-style: none;
+    margin: 1rem;
+    text-transform: uppercase;
+    text-align: left;
+    color: #ee9d5a;
+    font-weight: bolder;
+}
+
+
+@media(max-width:1000px){
+    html{
+        font-size: 55%;
+    }
+    #menu{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; left:0;
+        width: 100%;
+        background: #ee9d5a;
+        text-align: center;
+        padding: 1rem;
+        z-index: 1000;
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    header .navbar a{
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+
+    }
+    header .navbar.nav-toggle{
+         transform: scaleY(1);
+        opacity: 1;
+    }
+   
+    .home{
+         background-position: right;
+    }
+    .contact form {
+    padding: 2rem;
+    }
+    .contact form .inputBox input{
+        width: 100%;
+    }
+    
+}
+@media(max-width:400px){
+    html{
+        font-size: 50%;
+    }
+    .heading{
+        font-size: 2.2rem;
+    }
+    .home{
+        justify-content: center;
+    }
+    .home .content{
+        text-align: center;
+    }
+    .adoptme .box-container .box{
+        width: 100%;
+    }
+}
